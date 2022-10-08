@@ -27,6 +27,14 @@ public class KafkaConfig {
                 .build();
     }
 
+//    @Bean
+//    public NewTopic topic2() {
+//        return TopicBuilder.name("test_replica_error")
+//                .partitions(3)
+//                .replicas(2)
+//                .build();
+//    }
+
     @Bean
     public ProducerFactory<String, String> producerFactory() {
         return new DefaultKafkaProducerFactory<>(producerConfigs());
